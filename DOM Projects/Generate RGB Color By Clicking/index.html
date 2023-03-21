@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            gap: 30px;
+
+        }
+        #heading{
+            text-shadow: 2px 2px #fff;
+
+        }
+
+        #btn{
+            padding: 10px;
+            border: 1px solid #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            background-color: black;
+            color: #fff;
+
+        }
+        #btn:hover{
+            background-color: #fff;
+            color: black;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2 id="heading">Change the background Color By Clicking the following button</h2>
+    <button id="btn">Change Color</button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
