@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        gap: 30px;
+        position: relative;
+      }
+      #heading {
+        text-shadow: 2px 2px #fff;
+      }
+
+      #btn {
+        padding: 10px;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: black;
+        color: #fff;
+        border-radius: 3px;
+      }
+      #btn:hover {
+        background-color: #fff;
+        color: black;
+        cursor: pointer;
+      }
+
+      #show-hex {
+        padding: 10px;
+        border: none;
+        font-weight: 700;
+        border-radius: 3px;
+      }
+
+      #copy-btn {
+        padding: 10px;
+        border-radius: 3px;
+      }
+      #copy-btn:hover {
+        background-color: gray;
+        color: black;
+        cursor: pointer;
+      }
+
+      .div-style {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        width: 150px;
+        height: 80px;
+        /* background-color: rgb(165, 83, 241); */
+        background: rgb(48, 46, 200);
+        background: linear-gradient(
+          353deg,
+          rgba(48, 46, 200, 1) 11%,
+          rgba(128, 234, 255, 1) 100%
+        );
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: 0px 0px 2px #fff;
+      }
+
+      .close-style::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+        top: 2px;
+        right: 2px;
+        cursor: pointer;
+        background-image: url(asset/close.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+      }
+
+      .slide-in {
+        animation: slide-in 0.5s ease;
+      }
+
+      .slide-out {
+        animation: silde-out 0.5s ease;
+      }
+
+      @keyframes slide-in {
+        from {
+          transform: translatex(200px);
+          opacity: 0;
+        }
+        to {
+          transform: translatex(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes silde-out {
+        from {
+          transform: translatex(0px);
+          opacity: 1;
+        }
+        to {
+          transform: translatex(200px);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="heading">
+      Change the background Color By Clicking the following button
+    </h2>
+    <div class="show-input">
+      <input type="text" disabled value="#000000" id="show-hex" />
+      <button id="copy-btn">Copy</button>
+    </div>
+    <button id="btn" title="copy hexcolor clipboard">Change Color</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
